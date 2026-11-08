@@ -1,0 +1,32 @@
+/*
+ * Student Presentation Registration Management System  (single-file, Core PHP + MySQL/PDO)
+ * -------------------------------------------------------------------------------------
+ * Upload this ONE file to public_html (or a sub-folder). On first run it creates:
+ *   all MySQL tables (database details are in DB_HOST / DB_NAME / DB_USER / DB_PASS below), data/ (+ .htaccess that blocks web access) and uploads/ (+ .htaccess that blocks script execution).
+ *   If an old data/app.sqlite from the SQLite version is still there, its data is copied into MySQL once, automatically.
+ * Default admin:  username  admin   password  Admin@12345   -> open  the site (index.html)#admin  and change it in Settings.
+ * Teachers:  teachers create their own account at  the site (index.html)#teacher  (name, department, mobile, Gmail, photo) and then create/manage their own subjects
+ *             (optional subject code, custom form, slots, deadline). The admin controls everything: Teachers page (add/edit/block/delete), assign any subject to a teacher,
+ *             and Settings -> Teacher sign-up (open/close).
+ * Registration form fields are fully dynamic: the admin builds them per subject (Subjects -> Edit -> Registration form fields).
+ * Team leaders:  every team gets a password when it registers (admin/teacher can reset it in Registrations -> Edit). The leader signs in from the Teams page (the site (index.html)#teams-leader)
+ *                with the leader's Gmail OR mobile number (NO password) and can edit the team name, member details and photos - until registration closes, after which everything is locked.
+ * Public team page:  Admin -> Settings -> switch the page on, then tick the subjects to show (all their teams and individuals)  ->  the site (index.html)#teams
+ * Guidelines:  Admin -> Subjects -> Edit -> "Guidelines for students" (rules, how to present, time, evaluation ... one list per subject).
+ *              Students see them on the subject card, on the registration steps and on the team leader page.
+ * Subject info:  every subject now has Semester (Autumn/Spring/Summer + year), Department and Program (Undergraduate / Diploma / Both). The lists are editable in Admin -> Settings.
+ * Presentation files:  a team leader (or admin / the course teacher) can upload a PDF or PowerPoint (.ppt/.pptx) for a team. Files are stored in data/pres (web access blocked)
+ *             and are delivered only through short-lived signed links. 'Present' opens a full-screen presenter (arrow keys / swipe / click). PDF is shown by PDF.js;
+ *             PowerPoint is shown through Microsoft Office Online (needs a public website). Admin -> Subjects -> Edit controls upload on/off, upload deadline and public showing.
+ * v18: the registration form has an OPTIONAL presentation upload (PDF/PPT/PPTX). Team leaders AND individuals give a Gmail (no password; they sign in later with that Gmail or their mobile number), and after submitting they
+ *       are signed in and sent straight to their panel (Presentation page) where they can upload / replace the file until the upload deadline.
+ * v21: Admin -> Backup: one ZIP of the whole site (database as portable JSON for SQLite/MySQL + uploads + data + code). Restore it any time (also after an update or on a new host); a safety backup is made before every restore. Needs the PHP zip extension.
+ * v22: CHAT. Students open the site (index.html)#chat, type their name + mobile number or Gmail (a chat profile is created automatically, editable any time, no password), then join the
+ *       group of any course or message a teacher / CR directly. Teachers and CRs answer from their panel (Chat tab); the admin can read and reply everywhere and can switch student chat on/off.
+ * v28: CHAT UI. Facebook-Messenger style chat (blue bubbles, grouped messages, round avatars). Student "My profile" + "Sign out" now sit in an avatar menu at the top of the chat list;
+ *       on phones an opened conversation fills the whole screen (keyboard-safe) with a back arrow.
+ * v29: MOBILE APP (PWA). The site can be installed on a phone (Chrome: Install app / iPhone Safari: Share > Add to Home Screen). It opens full-screen with its own icon, splash screen,
+ *       bottom tab bar, offline page and service worker (uses manifest.json, sw.js and icon-*.png, which must sit next to this file). Needs HTTPS. Name/colours/icons are inside manifest.json.
+ * Requires PHP 7.4+ with pdo_mysql, fileinfo, mbstring (all standard on cPanel).
+ */
+declare(strict_types=1);

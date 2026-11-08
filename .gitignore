@@ -1,0 +1,4 @@
+backend/storage/data/
+backend/storage/uploads/
+backend/server/config.local.php
+.DS_Store

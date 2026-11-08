@@ -1,0 +1,4 @@
+{
+  "files.associations": { "*.php": "php" },
+  "php.validate.run": "onSave"
+}

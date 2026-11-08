@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<link rel="manifest" href="/api?manifest=1">
+<meta name="application-name" content="Presentation Registration">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Presentation Reg.">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<script src="js/device.js"></script>
+<meta name="description" content="Presentation registration: choose a subject, register as an individual or a team, and manage your team.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230d9488'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle'%3E%F0%9F%8E%93%3C/text%3E%3C/svg%3E">
+<title>Presentation Registration</title>
+<script src="/api?boot=1"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="splash" aria-hidden="true"><div><div class="si">&#127891;</div><b>Presentation Registration</b><div class="sp"></div></div></div>
+<nav id="tabbar" aria-label="App menu"></nav>
+<div id="instbar" role="dialog" aria-label="Install app"><div class="ii">&#127891;</div><div class="it" id="insttxt"></div><button type="button" class="go" id="instgo">Install</button><button type="button" class="x" id="instx" aria-label="Close"><i class="fa-solid fa-xmark"></i></button></div>
+<div id="instsheet" role="dialog" aria-modal="true"><div class="sh"><h3 id="instt">Install app</h3><div id="instb"></div><button type="button" class="bx" id="instc">OK</button></div></div>
+<a class="skip" href="#app">Skip to content</a>
+<noscript><div class="nojs">Please turn on JavaScript to use this website.</div></noscript>
+<header class="top"><div class="in">
+  <a class="brand" href="#"><i class="fa-solid fa-chalkboard-user"></i><span id="sitename">Presentation Registration</span></a>
+  <div class="pnav" id="pnav" aria-label="Panel menu"></div>
+  <span class="clock" id="bdclock"></span>
+  <nav id="mainnav" aria-label="Site"><a href="#" id="nav-s"><i class="fa-solid fa-house"></i> Home</a><a href="#people" id="nav-pe"><i class="fa-solid fa-id-card"></i> People</a><a href="#teams" id="nav-t"><i class="fa-solid fa-users"></i> Teams</a><a href="#chat" id="nav-c"><i class="fa-solid fa-comments"></i> Chat</a><a href="#teacher" id="nav-th" class="adm"><i class="fa-solid fa-right-to-bracket"></i> Sign in</a></nav>
+  <button type="button" class="sitebtn" id="sitebtn" aria-label="Site menu" aria-expanded="false"><i class="fa-solid fa-bars"></i><span>Site</span></button>
+</div></header>
+<div id="app"></div>
+<footer class="foot"><div>© <span id="year"></span> <span id="sitename2">Presentation Registration</span><span class="hm"> · All times are Bangladesh Time (UTC+6)</span></div><div style="margin-top:4px">Developed by <b>Mohoshin Shihab</b></div><div style="margin-top:8px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;font-size:.9rem"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="login.html">Login</a><a href="register.html">Register</a></div></footer>
+<div id="modal"><div class="mbox" id="mbox"></div></div>
+<div id="toasts"></div>
+<button type="button" id="totop" aria-label="Back to top" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+<div id="loader"><div class="spin"></div></div>
+
+<script src="js/script.js"></script>
+<script src="js/analytics.js"></script>
+<script src="js/pwa.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-keep-title>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<link rel="manifest" href="/api?manifest=1">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="icon" href="images/icon-192.png">
+<title>Register | Presentation Registration</title>
+<script src="/api?boot=1"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.top nav.spn{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.pg-hero{background:linear-gradient(135deg,var(--ink),var(--ink2));color:#fff;border-radius:var(--r);padding:30px 26px;margin-bottom:22px}
+.pg-hero h1{font-size:clamp(1.5rem,4vw,2.1rem);margin-bottom:8px}.pg-hero p{margin:0;color:#cfd9e8;max-width:62ch}
+.pg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-bottom:22px}
+.pg-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);padding:20px;display:flex;flex-direction:column;gap:8px;color:inherit;text-decoration:none}
+a.pg-card:hover{border-color:var(--teal);transform:translateY(-2px);transition:.15s}
+.pg-card .ic{width:44px;height:44px;border-radius:12px;background:var(--teal);color:#fff;display:grid;place-items:center;font-size:1.15rem}
+.pg-card h3{font-size:1.1rem}.pg-card p{margin:0;color:var(--mut);font-size:.95rem}
+.pg-card .go{margin-top:auto;color:var(--teal-d);font-weight:600;font-size:.92rem}
+.pg-sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;margin-bottom:22px}
+.pg-sec h2{font-size:1.25rem;margin-bottom:10px}.pg-sec ul{margin:0;padding-left:20px;display:grid;gap:6px}.pg-sec p{margin:0 0 8px}
+.pg-foot{text-align:center;color:var(--mut);font-size:.9rem;padding:10px 0 30px}.pg-foot a{margin:0 8px}
+</style>
+</head>
+<body>
+<header class="top"><div class="in">
+  <a class="brand" href="index.html"><i class="fa-solid fa-chalkboard-user"></i><span data-sitename>Presentation Registration</span></a>
+  <nav class="spn" aria-label="Site">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="register.html" class="on">Register</a>
+    <a href="login.html" class="adm"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+  </nav>
+</div></header>
+<main class="wrap">
+<section class="pg-hero"><h1>Register</h1><p>Students register for a presentation alone or as a team; teachers and class representatives can create an account to manage their own subjects.</p></section>
+<div class="pg-grid"><a class="pg-card" href="index.html#presentation"><span class="ic"><i class="fa-solid fa-display"></i></span><h3>Presentation registration</h3><p>Pick a subject, register as an individual or a team, and get your reference code.</p><span class="go">Register now <i class="fa-solid fa-arrow-right"></i></span></a><a class="pg-card" href="index.html#assignment"><span class="ic"><i class="fa-solid fa-file-lines"></i></span><h3>Assignment submission</h3><p>Submit your assignment file, alone or with your team.</p><span class="go">Submit <i class="fa-solid fa-arrow-right"></i></span></a><a class="pg-card" href="index.html#lab"><span class="ic"><i class="fa-solid fa-flask"></i></span><h3>Lab report submission</h3><p>Upload your lab report for the subject.</p><span class="go">Submit <i class="fa-solid fa-arrow-right"></i></span></a><a class="pg-card" href="index.html#teacher"><span class="ic"><i class="fa-solid fa-user-plus"></i></span><h3>Teacher / CR account</h3><p>Create your own account (open the <b>Create account</b> tab). The admin can switch teacher sign-up on or off.</p><span class="go">Create account <i class="fa-solid fa-arrow-right"></i></span></a><a class="pg-card" href="index.html#chat"><span class="ic"><i class="fa-solid fa-comments"></i></span><h3>Chat profile</h3><p>Create a chat profile with your name, batch and program to join your course groups.</p><span class="go">Create profile <i class="fa-solid fa-arrow-right"></i></span></a></div></main>
+<footer class="pg-foot"><div>&copy; <span id="year"></span> <span data-sitename>Presentation Registration</span> &middot; Developed by <b>Mohoshin Shihab</b></div>
+<div style="margin-top:6px"><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="login.html">Login</a><a href="register.html">Register</a></div></footer>
+<script>
+(function(){var b=window.__BOOT||{};if(b.siteName)document.querySelectorAll('[data-sitename]').forEach(function(e){e.textContent=b.siteName});
+var y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear();
+if(b.siteName&&document.title.indexOf('|')>-1)document.title=document.title.split('|')[0].trim()+' | '+b.siteName})();
+</script>
+</body>
+</html>
